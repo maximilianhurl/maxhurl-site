@@ -19,6 +19,10 @@
     sudo: true
     copy: src=../../../../../maxhurl.py dest=/opt/maxhurl-site/
 
+  - name: copy secrets
+    sudo: true
+    copy: src=../../../../../secrets.py dest=/opt/maxhurl-site/
+
 
   - name: copy supervisord config
     sudo: true

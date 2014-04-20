@@ -1,0 +1,5 @@
+---
+- name: Setup maxhurl.co.uk
+  hosts: droplets
+  roles:
+    - webserver

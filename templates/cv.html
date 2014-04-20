@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+
+{% block title %}CV{% endblock %}
+
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='cv/css/default.css') }}" />
+<link rel="stylesheet" media="all and (max-device-width: 480px)" href="{{ url_for('static', filename='cv/css/mobile.css') }}" />
+<link rel="stylesheet" media="all and (min-device-width: 481px)" href="{{ url_for('static', filename='cv/css/desktop.css') }}" />
+{% endblock %}
+
+{% block content %}
+
+        <h1>Max Hurl - Web Design &amp; Development</h1>
+
+        <article>
+
+            <!-- ====== Contact Information  ======-->
+
+            <div class="twoCol">
+                <div>
+                    <address>Brighton, UK</address>
+                </div>
+                <div>
+                    <address>
+                        <a href="mailto:max@maxhurl.co.uk?Subject=We%20read%20your%20CV%20and...&body=YOU%27RE%20HIRED" title="Email Max">max@maxhurl.co.uk</a>
+                    </address>
+                </div>
+            </div><!-- end of two col-->
+
+
+            <!-- ======  Profile  ======-->
+
+            <h2>Profile</h2>
+
+            <p>
+                I am a final year Digital Media Development student at Brighton University developing my career and love for development, design and digital media in general.
+                I am looking to start my career at a creative and dynamic company that does an interesting range of projects that will help me learn new skills and put my
+                creativity and enthusiasm into practice. Currently my main skills are in web development and design using JavaScript, Jquery, HTML (5 and below), CSS3,
+                LAMP (PHP), photoshop and I am improving my skills in OOP and mobile development. I am always looking to try out new technologies and I relish the
+                chance to broaden my horizons in as many ways as possible.
+            </p>
+            <p>
+                For my major individual University project I have created an iOS optimised HTML5 mobile web app that aims to be a digital replacement for a notebook and create an experience as good as native apps. During my final year I have also created multiplayer Flash games, an Android app and gained valuable skills in Usability Evaluation.
+            </p>
+
+
+            <!-- ======  Education  ======-->
+
+            <h2>Education</h2>
+
+            <h3>2008 – 2012 Brighton University - BSc Digital Media Development</h3>
+            <p>
+                3rd Year Modules:Usability Evaluation, Internet gaming design and development, Digital Marketing, Mobile Application Development (Android)
+            </p>
+            <div class="twoCol">
+                <div>
+                    <ul>
+                        <li><h5>2nd Year Modules Overall grade A</h5></li>
+                        <li>Authoring for Multimedia (flash) - B</li>
+                        <li>Website development - A+</li>
+                        <li>Time Based Media - A</li>
+                        <li>3D Graphics and Animation - B+</li>
+                        <li>Creative Design Lab - B+</li>
+                        <li>User Experience Design - B</li>
+                        <li>Project planning and control - A-</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><h5>1st Year Modules Overall grade A</h5></li>
+                        <li>Introduction to website development – A</li>
+                        <li>Visual Design for Digital Media – A</li>
+                        <li>Programming (Java) – A</li>
+                        <li>Introduction to New Media – B</li>
+                        <li>Human Computer Interaction – B</li>
+                        <li>Introduction to Databases – C</li>
+                    </ul>
+                </div>
+            </div><!-- end of two col -->
+
+            <h3>2001 – 2008   City of Bristol College & St. Katherine’s School</h3>
+            <p>3 A Levels: Media Studies, English Literature and Language and Computing</p>
+            <p>12 GCSEs: grade A - C</p>
+
+
+            <!-- ======  Experience  ======-->
+
+            <h2>Experience</h2>
+
+            <h3>Various - Freelance design and development</h3>
+            <details>2009 - Present</details>
+            <p>
+                I have worked on a number of freelance design and development projects. My current projects include a web app for controlling high end
+                 media servers and a portfolio/e-commerce site for a photographer (<a href="http://dev.geoff-bailey.com" title="Geoff Bailey's site is currently in development">dev.geoff-bailey.com</a>).
+                  Past projects include a website for a West Sussex Pilates gym (<a href="http://studioleisure.com" title="This site may have been edited by the client">studioleisure.com</a>), a portfolio
+                   site for an illustrator (<a href="http://hannahtemple.co.uk" title="Visit Hannah Temple's portfolio">hannahtemple.co.uk</a>) and a number of smaller sites for friends and family.
+            </p>
+
+            <h3>7th Sense Design Ltd - Digital Media Developer/Designer</h3>
+            <details>July ’10 - September ’11</details>
+            <p>
+                During the 2010 academic year I worked full-time doing a paid placement on the outskirts of Brighton. The role included designing and
+                developing a <a href="http://7thsensedesign.com" title="Visit the site I created">new company website</a> and CMS, creating hi-res video/animation content, developing/managing the companies social media presence,
+                building media servers, designing an iOS app and helping with phone support of clients.<br/><br/>I also worked on many smaller pieces of design,
+                development. This included things like producing a short print brochure, creating a demo web app, creating stickers to help brand servers,
+                creating promotional documents and creating application icons. Due to the size and nature of the company’s work no one else had much
+                experience with design, animation or web development. This meant I usually had to resolve my own issues and do a lot of self-directed learning.
+            </p>
+
+            <h3>Kineo Ltd - Freelance E-learning developer</h3>
+            <details>March ’10 - July ’10</details>
+            <p>
+                I worked part-time at Kineo Ltd while I studied during my second year. I was mostly tasked with creating and populating XML/Flash templates
+                using pre-defined scripts and guidelines. I would often have to test modules, produce/edit graphics and sometimes create short flash animations.
+                I also gained experience with subversion using tortoiseSVN.
+            </p>
+
+            <h3>Various - Customer/Sales Assistant</h3>
+            <details>November ’07 – January ‘10</details>
+            <p>
+                I spent a few years before University, and a few months during, working part-time as a shop assistant. Apart from the importance of good customer
+                service the main thing I learnt was a desire to have a job doing work I can take pride in.
+            </p>
+
+
+            <!-- ======  Skills  ======-->
+
+            <h2>Skills</h2>
+
+            <ul>
+                <li>
+                    I have used the Adobe CS suite extensively and have experience using Photoshop, After Effects, Premiere Pro, Flash and Illustrator.
+                </li>
+                <li>
+                    I have skills in video production, animation and 3d animation using Adobe video products, Cinema4d and 3ds Max.
+                </li>
+                <li>
+                    I have used Macs and PCs for most of my life and feel comfortable using both. I have also built and upgraded PCs and Macs.
+                </li>
+            </ul>
+
+
+            <!-- ======  Achievements & Interests  ======-->
+
+            <h2>Achievements &amp; Interests</h2>
+
+            <p>
+                The achievements I am most proud of have been during my time at University. I was awarded a First during my first and second years and
+                also an achievement-based scholarship after my first year. During my second year I was a representative for my course which involved highlighting
+                any issues from feedback given by fellow students.<br/><br/>Outside of my studies, I have a variety of other interests. I am a keen cyclist,
+                an avid film fan and enjoy playing computer games.
+            </p>
+
+
+            <!-- ======  Referees  ======-->
+
+            <h2>Referees</h2>
+
+            <div class="twoCol">
+                <div>
+                    <h4>Academic</h4>
+                    <address>
+                        Dr. Liz Guy<br/>
+                        Head of year at University<br/><br/>
+                        Watts Building<br/>
+                        Moulsecoomb<br/>
+                        Brighton<br/>
+                        BN2 4GJ<br/>
+                        01273 642413<br/>
+                        <a href="mailto:e.s.guy@bton.ac.uk" title="Email Liz Guy">e.s.guy@brighton.ac.uk</a>
+                    </address>
+                </div>
+
+                <div>
+                    <h4>Work</h4>
+                    <address>
+                        Mr. Ian Macpherson<br/>
+                        Manager - 7th Sense<br/><br/>
+                        Enterprise House<br/>
+                        Horton Hill<br/>
+                        Henfield Road<br/>
+                        Small Dole<br/>
+                        West Sussex<br/>
+                        BN5 9XH<br/>
+                        <a href="mailto:ian@7thsense.co.uk" title="Email Ian Macpherson">ian@7thsense.co.uk</a>
+                    </address>
+                </div>
+            </div><!-- end of two col -->
+
+        </article>
+
+{% endblock %}

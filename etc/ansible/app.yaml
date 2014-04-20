@@ -1,0 +1,7 @@
+---
+- name: Install app for maxhurl.co.uk
+  hosts: droplets
+  roles:
+    - app
+  handlers:
+    - include: roles/webserver/handlers/main.yaml

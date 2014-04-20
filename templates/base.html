@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="keywords" content="max,hurl,mobile web apps,mobile apps, apps,portfolio,web,design,development,brighton,east sussex" />
+<meta name="Description" content="Max Hurl, creator of mobile apps and websites based in central Brighton."/>
+<meta name="google-site-verification" content="rj6ozfZYf1tUx6YzCsU5DKNGL2AGbDNOR1A8-0VOKMY" />
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/max.ico') }}" />
+<title>Max Hurl - {% block title %}Web Design &amp; Development{% endblock %}</title>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10638333-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- stuff for iPhone -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='images/loadingScreen-small.png') }}" sizes="320x460"/>
+<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='images/loadingScreen-large.png') }}" sizes="640x920"/>
+<link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='images/touchIcon.png') }}"/>
+
+
+{% block styles %}
+<link rel="stylesheet" media="all and (max-device-width: 480px)" href="{{ url_for('static', filename='css/mobile.css') }}" />
+<link rel="stylesheet" media="all and (min-device-width: 481px)" href="{{ url_for('static', filename='css/desktop.css') }}" />
+{% endblock %}
+
+
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/jquery.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/canvas.js') }}" type="text/javascript"></script>
+{% endblock %}
+
+
+</head>
+
+{% block body %}
+    <body onload="canvas();" onorientationchange="setSize(false);">
+        <section>
+            {% block content %}
+                <h1>Max Hurl - Mobile Apps, Web Design &amp; Development in Brighton</h1>
+
+                <p>Mobile Apps, Web Development, Design &amp; Biscuit Eating. </p>
+
+                <h2>Check out some of my work at:</h2>
+                <ul>
+                    <li><a href="http://www.hannahtemple.co.uk" target="_blank">hannahtemple.co.uk</a></li>
+                    <li><a href="http://www.geoff-bailey.com" target="_blank">geoff-bailey.com</a></li>
+                    <li><a href="http://www.7thsensedesign.com" target="_blank">7thsensedesign.com</a></li>
+                    <li><a href="http://www.vimeo.com/maxhurl" target="_blank">vimeo.com/maxhurl</a></li>
+                </ul>
+
+                <h2>Get in touch:</h2>
+                <ul>
+                    <li><a href="mailto:max@maxhurl.co.uk?subject=I%20saw%20you're%20website%20and...">max@maxhurl.co.uk</a></li>
+                    <li><a href="http://www.facebook.com/maximilian.hurl" target="_blank">facebook.com/maximilian.hurl</a></li>
+                    <li><a href="http://www.twitter.com/maximilianhurl" target="_blank">twitter.com/maximilianhurl</a></li>
+                    <li><a href="https://github.com/maximilianhurl" target="_blank">github.com/maximilianhurl</a></li>
+                    <li><a href="http://stackoverflow.com/users/196361/max" target="_blank">stackoverflow.com/users/196361/</a></li>
+                    <li><a href="http://uk.linkedin.com/pub/max-hurl/23/653/32" target="_blank">linkedin.com/max-hurl/</a></li>
+                </ul>
+            {% endblock %}
+        </section>
+
+        <canvas id="canvas"></canvas>
+
+    </body>
+{% endblock %}
+</html>

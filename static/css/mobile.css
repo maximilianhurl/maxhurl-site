@@ -1,0 +1,79 @@
+/* CSS Document 
+
+	  _          _          _					
+	>(')____,  >(')____,  >(')____,		
+	(` =~~/    (` =~~/    (` =~~/		
+	~^~^`---'~^~^~^`---'~^~^~^`---'~^~^~     
+
+Max Hurl 2011
+For  mobile */
+
+/*- resets -*/
+*{
+ 		padding:0;
+ 		margin:0;
+}
+
+/*- main -*/
+body{
+	font-family:'nevis bold';
+	background:#6b797e;
+	color:#485053;
+	line-height:18px;
+	font-size:13px;
+	}
+
+section{
+	float:left;
+	z-index:5;
+	position: absolute;
+	background:#6b797e;
+	padding:20px;
+	margin:40px 0px 0 40px;
+	width:200px;
+	}
+
+h1{
+	display: block;
+	text-indent:-999px;
+	background:url('../images/maxhurl-400.gif');
+	background-size: 200px 59px;
+	width:200px;
+	height:59px;
+	}
+
+h2{
+	margin:20px 0 16px 0;
+	font-size:13px;
+	}
+
+p,h2{
+	font-weight:normal;
+	}
+
+p{
+	margin-top: 20px;
+	}
+
+ul{
+	list-style: none;	
+	}
+	ul a{
+		color:#a5afb2;
+		text-decoration: none;
+		}
+	
+canvas{
+	position: absolute;
+	}
+			
+@font-face {
+    font-family: 'nevis bold';
+    src: url('../fonts/nevis-webfont.eot');
+    src: url('../fonts/nevis-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nevis-webfont.woff') format('woff'),
+         url('../fonts/nevis-webfont.ttf') format('truetype'),
+         url('../fonts/nevis-webfont.svg#nevisBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

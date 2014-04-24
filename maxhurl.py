@@ -33,10 +33,10 @@ def send_app_message():
     email_text = "User Email:\n %s \n\n User Message:\n %s \n" % (user_email, user_message)
 
     requests.post(
-        "https://api.mailgun.net/v2/mg.maxhurl.co.uk/messages",
+        "https://api.mailgun.net/v2/sandboxb7645bd943614e39bb23ef85318eb9e1.mailgun.org/messages",
         auth=("api", mailgun_key),
         data={
-            "from": "no-reply <no-reply@mg.maxhurl.co.uk>",
+            "from": "no-reply <no-reply@sandboxb7645bd943614e39bb23ef85318eb9e1.mailgun.org>",
             "to": "Max <max@maxhurl.co.uk>",
             "subject": "Jotter Feedback Message",
             "text": email_text

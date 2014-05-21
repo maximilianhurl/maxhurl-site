@@ -20,7 +20,7 @@
 
 `ansible-playbook etc/ansible/webserver.yaml -i etc/ansible/hosts.ini`
 
-`ansible-playbook etc/ansible/app.yaml --inventory-file=etc/ansible/hosts.ini`
+`ansible-playbook etc/ansible/app.yaml -i etc/ansible/hosts.ini`
 
 Currently there is an issue with these anisble scripts and not correctly starting supervisord.
 

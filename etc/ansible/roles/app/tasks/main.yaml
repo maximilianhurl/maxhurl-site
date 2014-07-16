@@ -19,6 +19,7 @@
     sudo: true
     copy: src=../../../../../maxhurl.py dest=/opt/maxhurl-site/
 
+
   - name: copy secrets
     sudo: true
     copy: src=../../../../../secrets.py dest=/opt/maxhurl-site/
@@ -27,6 +28,11 @@
   - name: copy supervisord config
     sudo: true
     copy: src=../../../../../etc/supervisord/ dest=/opt/maxhurl-site/etc/supervisord/
+
+
+  - name: start supervisord
+    command: supervisord -c /opt/maxhurl-site/etc/supervisord/supervisord.conf
+    ignore_errors: yes
 
 
   - name: install requirements

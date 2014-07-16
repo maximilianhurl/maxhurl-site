@@ -1,12 +1,18 @@
 ---
 
+  - name: apt get update
+    sudo: true
+    apt: update_cache=yes
+
+
   - name: install pip
     sudo: true
     apt: name=python-pip state=present
 
+
   - name: install nginx server
     sudo: true
-    apt: pkg=nginx state=present update_cache=true
+    apt: name=nginx state=present
 
 
   - name: upgrade pip
@@ -33,6 +39,10 @@
     sudo: true
     copy: src=maxhurl.co.uk dest=/etc/nginx/sites-available/maxhurl.co.uk
 
+  - name: remove default nginx config
+    sudo: true
+    command: rm /etc/nginx/sites-enabled/default
+    ignore_errors: yes
 
   - name: copy nginx virtualhost sites-enabled config
     sudo: true

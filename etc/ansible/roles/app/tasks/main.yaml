@@ -1,23 +1,8 @@
 ---
 
-  - name: copy static files
-    sudo: true
-    copy: src=../../../../../static dest=/opt/maxhurl-site/
+  - file: path=/opt/maxhurl-site state=absent
 
-
-  - name: copy template files
-    sudo: true
-    copy: src=../../../../../templates dest=/opt/maxhurl-site/
-
-
-  - name: copy requirements
-    sudo: true
-    copy: src=../../../../../requirements.txt dest=/opt/maxhurl-site/
-
-
-  - name: copy flask app
-    sudo: true
-    copy: src=../../../../../maxhurl.py dest=/opt/maxhurl-site/
+  - git: repo=https://github.com/maximilianhurl/maxhurl-site.git dest=/opt/maxhurl-site
 
 
   - name: copy secrets
@@ -43,15 +28,3 @@
     supervisorctl: name=maxhurl_flask state=restarted config=/opt/maxhurl-site/etc/supervisord/supervisord.conf
     notify: restart nginx
 
-
-  # - name: reread supervisorctl
-  #   shell: supervisorctl -c /opt/maxhurl-site/etc/supervisord/supervisord.conf reread
-
-
-  # - name: update supervisorctl
-  #   shell: supervisorctl -c /opt/maxhurl-site/etc/supervisord/supervisord.conf update
-
-
-  #- name: start/restart flask app
-  #  supervisorctl: name=maxhurl_flask state=restarted config=/opt/maxhurl-site/supervisord/supervisord.conf
-  #  notify: restart nginx

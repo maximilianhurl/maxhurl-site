@@ -15,6 +15,11 @@
     apt: name=nginx state=present
 
 
+  - name: install git
+    sudo: true
+    apt: name=git state=present
+
+
   - name: upgrade pip
     sudo: true
     pip: name=pip state=present extra_args="--upgrade"

@@ -1,8 +1,11 @@
 import requests
 from secrets import mailgun_key, app_message_key, mark_message_key
 from flask import Flask, render_template, request, jsonify
+from flask.ext.cors import CORS, cross_origin
+
 
 app = Flask(__name__, static_folder='static', static_url_path='')
+CORS(app)
 
 
 @app.route("/")
@@ -29,6 +32,7 @@ def send_message(to, subject, message):
 
 
 @app.route("/send-mark-message/", methods=['POST'])
+@cross_origin()
 def send_mark_message():
 
     for value in ['name', 'message', 'email', 'phone_number', 'mark_message_key']:

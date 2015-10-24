@@ -51,7 +51,7 @@ def send_mark_message():
         Message:\n %s \n
     """ % (name, email, phone_number, message)
 
-    send_message(to_emails, "Website Contact Form Message", email_text)
+    send_message(to_emails, "theshoelounge.net Contact Form Message", email_text)
 
     return jsonify(message="Message sent"), 200
 

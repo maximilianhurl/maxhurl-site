@@ -1,19 +1,19 @@
-/* CSS Document 
+/* CSS Document
 
-	\`*-.                   
-	 )  _`-.                
-	.  : `. .               
-	: _   '  \              
-	; *` _.   `*-._         
-	`-.-'          `-.      
-	  ;       `       `.    
-	  :.       .        \   
-	  . \  .   :   .-'   .  
-	  '  `+.;  ;  '      :  
+	\`*-.
+	 )  _`-.
+	.  : `. .
+	: _   '  \
+	; *` _.   `*-._
+	`-.-'          `-.
+	  ;       `       `.
+	  :.       .        \
+	  . \  .   :   .-'   .
+	  '  `+.;  ;  '      :
 	  :  '  |    ;       ;-.
 	  ; '   : :`-:     _.`* ;
 		.*' /  .*' ; .*`- +'  `*'
-	`*-*   `*-*  `*-*'       
+	`*-*   `*-*  `*-*'
 
 Max Hurl 2011
 For desktops and tablets*/
@@ -52,9 +52,7 @@ section{
 	float:left;
 	z-index:5;
 	position: absolute;
-	
-	background:#6b797e;
-
+	display: none; /* remove the backend */
 	}
 
 h1{
@@ -79,22 +77,22 @@ p{
 	}
 
 ul{
-	list-style: none;	
+	list-style: none;
 	}
 	ul a{
 		color:#a5afb2;
 		font-size: 16px;
 		text-decoration: none;
 		transition: padding 0.4s ease-in-out;
-		-moz-transition: padding 0.4s ease-in-out; 
-		-webkit-transition: padding 0.4s ease-in-out; 
+		-moz-transition: padding 0.4s ease-in-out;
+		-webkit-transition: padding 0.4s ease-in-out;
 		-o-transition: padding 0.4s ease-in-out;
 		}
 	ul a:hover,ul a:active{
 		padding-left:20px;
 		outline:none;
 		}
-	
+
 canvas{
 	position: absolute;
 	}

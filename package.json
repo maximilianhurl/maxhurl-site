@@ -31,7 +31,6 @@
     "matter-js": "=0.8.0",
     "poly-decomp": "^0.1.1",
     "underscore": "=1.8.3",
-    "vectorize-text": "=3.0.2",
     "visibilityjs": "=1.2.1"
   },
   "devDependencies": {

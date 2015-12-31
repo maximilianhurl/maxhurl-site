@@ -1,5 +1,4 @@
 waitress==0.8.8
 Flask==0.10.1
-supervisor==3.0
 requests==2.2.1
 Flask-Cors==2.1.0

@@ -5,7 +5,7 @@ from secrets import mailgun_key, app_message_key, mark_message_key
 import requests
 
 
-app = Flask(__name__, static_folder='static/build', static_url_path='/static/')
+app = Flask(__name__, static_folder='static/build', static_url_path='/static')
 CORS(app)
 
 

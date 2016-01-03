@@ -36,7 +36,15 @@ export default class CanvasManager {
       '#b6dc62',
       '#575b5b',
       '#c44d58',
-      '#4cc9c0'
+      '#4cc9c0',
+      '#b6dc62',
+      '#575b5b',
+      '#c44d58',
+      '#4cc9c0',
+      '#b6dc62',
+      '#575b5b',
+      '#c44d58',
+      '#4cc9c0',
     ];
 
     this.BGCOL = '#1e1f1f';
@@ -104,7 +112,7 @@ export default class CanvasManager {
           this.TRIANGLERADIUS,
           {
             isStatic: true,
-            angle: Math.PI * 0.33,
+            angle: 3 * Math.PI,
             render: renderOpts
           }
         );

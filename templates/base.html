@@ -5,8 +5,8 @@
 <meta name="keywords" content="max,hurl,mobile web apps,mobile apps, apps,portfolio,web,design,development,brighton,east sussex" />
 <meta name="Description" content="Max Hurl, creator of mobile apps and websites based in central Brighton."/>
 <meta name="google-site-verification" content="rj6ozfZYf1tUx6YzCsU5DKNGL2AGbDNOR1A8-0VOKMY" />
-<link rel="shortcut icon" href="{{ url_for('static', filename='images/max.ico') }}" />
-<title>Max Hurl - {% block title %}Web Design &amp; Development{% endblock %}</title>
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+<title>Max Hurl - {% block title %}Web &amp; App Development{% endblock %}</title>
 
 <script type="text/javascript">
 
@@ -22,24 +22,19 @@
 
 </script>
 
-<!-- stuff for iPhone -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="format-detection" content="telephone=no" />
-<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='images/loadingScreen-small.png') }}" sizes="320x460"/>
-<link rel="apple-touch-startup-image" href="{{ url_for('static', filename='images/loadingScreen-large.png') }}" sizes="640x920"/>
-<link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='images/touchIcon.png') }}"/>
+<link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='images/apple-touch-icon-76x76.png') }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='images/apple-touch-icon-120x120.png') }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='images/apple-touch-icon-152x152.png') }}">
 
-
-{% block styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
-{% endblock %}
-
+{% block styles %}<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />{% endblock %}
 
 </head>
 
 {% block body %}
-    <body>
+    <body class="{% block bodyclass %}{% endblock %}">
         <div class="content-container">
 
             {% block content %}
@@ -54,6 +49,7 @@
                 <div>
                     <h2>Work</h2>
                     <ul>
+                        <li><a href="https://github.com/maximilianhurl" target="_blank">github.com/maximilianhurl</a></li>
                         <li><a href="https://itunes.apple.com/gb/app/jotter/id1059221816?mt=8" target="_blank">Jotter iPhone App</a></li>
                         <li><a href="http://www.theshoelounge.net" target="_blank">theshoelounge.net</a></li>
                         <li><a href="http://www.hannahtemple.co.uk" target="_blank">hannahtemple.co.uk</a></li>
@@ -67,12 +63,12 @@
                 <div>
                     <h2>Skills</h2>
                     <ul>
-                        <li><p><strong>Python</strong> - Django</p></li>
-                        <li><p><strong>Javascript</strong> - Plain, React, Angular</p></li>
-                        <li><p><strong>Native iOS</strong> - Objective-C</p></li>
-                        <li><p><strong>Hybrid apps</strong> - React Native, Phonegap</p></li>
-                        <li><p><strong>Sysadmin</strong><span class="hidden-mobile"> - Linux, AWS</span></p></li>
-                        <li><p><strong>Wordpress</strong><span class="hidden-mobile"> - PHP</span></p></li>
+                        <li><strong>Python</strong> - Django</li>
+                        <li><strong>Javascript</strong> - Plain, React, Angular</li>
+                        <li><strong>Native iOS</strong> - Objective-C</li>
+                        <li><strong>Hybrid apps</strong> - React Native, Phonegap</li>
+                        <li><strong>Sysadmin</strong><span class="hidden-mobile"> - Linux, AWS</span></li>
+                        <li><strong>Wordpress</strong><span class="hidden-mobile"> - PHP</span></li>
                     </ul>
                 </div>
             </section>
@@ -83,7 +79,6 @@
                     <ul>
                         <li><a href="mailto:max@maxhurl.co.uk?subject=I%20saw%20you're%20website%20and...">max@maxhurl.co.uk</a></li>
                         <li><a href="https://github.com/maximilianhurl" target="_blank">github.com/maximilianhurl</a></li>
-                        <li><a href="http://stackoverflow.com/users/196361/max" target="_blank">stackoverflow.com/users/196361/</a></li>
                         <li><a href="http://uk.linkedin.com/pub/max-hurl/23/653/32" target="_blank">linkedin.com/max-hurl/</a></li>
                     </ul>
                 </div>
@@ -101,9 +96,9 @@
         <script src="{{ url_for('static', filename='js/canvas.js') }}" type="text/javascript"></script>
 
         <script type="text/javascript">
-            {% block javascript %}
-                window.setupCanvas(4, 'canvas-container');
-            {% endblock %}
+        {% block javascript %}
+            window.setupCanvas(4, 'canvas-container');
+        {% endblock %}
         </script>
 
     </body>

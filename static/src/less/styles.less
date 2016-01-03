@@ -76,9 +76,19 @@ h3{
 	font-size: 1.5em;
 }
 
-a, a:active, a:focus, a:hover, p{
+p, li  {
+  font-size:1.5em;
+}
+
+/* overides for large amounts of text */
+.small-text {
+  p, li  {
+    font-size:1.3em;
+  }
+}
+
+a, a:active, a:focus, a:hover {
 	color:#161d24;
-	font-size: 1.5em;
 }
 
 ul {
@@ -164,7 +174,7 @@ section {
 }
 
 /* generate layout for text on left triangles */
-.generate-left-sections(10);
+.generate-left-sections(20);
 
 .generate-left-sections(@n, @i: 2) when (@i =< @n) {
   .content-container section:nth-child(@{i}) {
@@ -174,7 +184,7 @@ section {
 }
 
 /* generate layout for text on right triangles */
-.generate-right-sections(10);
+.generate-right-sections(20);
 
 .generate-right-sections(@n, @i: 1) when (@i =< @n) {
   .content-container section:nth-child(@{i}) {

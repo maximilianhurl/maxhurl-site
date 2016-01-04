@@ -70,6 +70,7 @@ h1 {
 h2{
 	font-size: 2.5em;
 	padding-bottom: 15px;
+  line-height: 1.1em;
 }
 
 h3{
@@ -142,7 +143,7 @@ canvas {
 
 section {
 	position: absolute;
-	width: 52%;
+	width: 51%;
   height:85vw;
   max-height: 436px;
   display: flex;
@@ -162,6 +163,16 @@ section {
   justify-content: flex-start;
 }
 
+.small-text {
+  .content-container section:nth-child(odd) {
+    padding-right: 20px;
+  }
+
+  .content-container section:nth-child(even) {
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 479px) {
 
   .content-container section:nth-child(odd) {
@@ -171,6 +182,16 @@ section {
   .content-container section:nth-child(even) {
     padding-left: 15px;
   }
+
+  .small-text {
+    .content-container section:nth-child(odd) {
+      padding-right: 9px;
+    }
+
+    .content-container section:nth-child(even) {
+      padding-left: 9px;
+    }
+  }
 }
 
 /* generate layout for text on left triangles */
@@ -178,7 +199,7 @@ section {
 
 .generate-left-sections(@n, @i: 2) when (@i =< @n) {
   .content-container section:nth-child(@{i}) {
-    margin-top: ((@i - 1) * 44%);
+    margin-top: ((@i - 1) * 44% - (@i * 0.28));
   }
   .generate-left-sections(@n, (@i + 2));
 }
@@ -188,7 +209,7 @@ section {
 
 .generate-right-sections(@n, @i: 1) when (@i =< @n) {
   .content-container section:nth-child(@{i}) {
-    margin-top: (max(((@i - 1) / 2) * 88%, 0));
+    margin-top: (max(((@i - 1) / 2) * 88% - (@i * 0.28), 0));
   }
   .generate-right-sections(@n, (@i + 2));
 }

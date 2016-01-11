@@ -3,7 +3,7 @@ import CanvasManager from './CanvasManager';
 
 window.decomp = decomp;  // used internally by matter.js
 
-window.setupCanvas = (triangeCount, containerId) => {
-  const canvasManager = new CanvasManager(triangeCount, containerId);
+window.setupCanvas = (canvasContainerId, contentContainerId) => {
+  const canvasManager = new CanvasManager(canvasContainerId, contentContainerId);
   canvasManager.render();
 }

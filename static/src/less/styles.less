@@ -125,7 +125,7 @@ footer {
 
 /*- content -*/
 
-.content-container, footer{
+#content-container, footer{
 	max-width: 500px;
 	margin: 0 auto;
 	position: relative;
@@ -144,74 +144,72 @@ canvas {
 section {
 	position: absolute;
 	width: 51%;
-  height:85vw;
-  max-height: 436px;
   display: flex;
   align-items: center; /* align inner items vertically */
 }
 
-.content-container section:nth-child(odd) {
+#content-container section:nth-child(odd) {
 	text-align: right;
 	right:0;
   padding-right: 30px;
   justify-content: flex-end;
 }
 
-.content-container section:nth-child(even) {
+#content-container section:nth-child(even) {
 	left:0;
   padding-left: 30px;
-  justify-content: flex-start;
+ justify-content: flex-start;
 }
 
 .small-text {
-  .content-container section:nth-child(odd) {
+  #content-container section:nth-child(odd) {
     padding-right: 20px;
   }
 
-  .content-container section:nth-child(even) {
+  #content-container section:nth-child(even) {
     padding-left: 20px;
   }
 }
 
 @media screen and (max-width: 479px) {
 
-  .content-container section:nth-child(odd) {
+  #content-container section:nth-child(odd) {
     padding-right: 15px;
   }
 
-  .content-container section:nth-child(even) {
+  #content-container section:nth-child(even) {
     padding-left: 15px;
   }
 
   .small-text {
-    .content-container section:nth-child(odd) {
+    #content-container section:nth-child(odd) {
       padding-right: 9px;
     }
 
-    .content-container section:nth-child(even) {
+    #content-container section:nth-child(even) {
       padding-left: 9px;
     }
   }
 }
 
 /* generate layout for text on left triangles */
-.generate-left-sections(20);
+/*.generate-left-sections(21);
 
 .generate-left-sections(@n, @i: 2) when (@i =< @n) {
-  .content-container section:nth-child(@{i}) {
+  #content-container section:nth-child(@{i}) {
     margin-top: ((@i - 1) * 44% - (@i * 0.28));
   }
   .generate-left-sections(@n, (@i + 2));
-}
+}*/
 
 /* generate layout for text on right triangles */
-.generate-right-sections(20);
+/*.generate-right-sections(21);
 
 .generate-right-sections(@n, @i: 1) when (@i =< @n) {
-  .content-container section:nth-child(@{i}) {
+  #content-container section:nth-child(@{i}) {
     margin-top: (max(((@i - 1) / 2) * 88% - (@i * 0.28), 0));
   }
   .generate-right-sections(@n, (@i + 2));
-}
+}*/
 
 

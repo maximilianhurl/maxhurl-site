@@ -3,7 +3,7 @@
 {% block title %}CV{% endblock %}
 
 {% block javascript %}
-    window.setupCanvas(18, 'canvas-container');
+    window.setupCanvas('canvas-container', 'content-container');
 {% endblock %}
 
 {% block bodyclass %}small-text{% endblock %}
@@ -20,6 +20,7 @@
 
     <section>
         <div>
+            <h2>Profile</h2>
             <p>I’m a full stack web and mobile app developer who enjoys taking projects from initial requirements through to finished product while contributing to all layers of technical work. I like to test my skills by learning and using new technologies/tools but understand the risks of utilising bleeding edge tooling in production.</p>
         </div>
     </section>
@@ -30,20 +31,23 @@
             <ul>
                 <li>Python primarily using the Django web framework</li>
                 <li>RESTful APIs mostly using Django REST framework and integrating with external APIs</li>
-                <li>Javascript - from basic JQuery to complex single page apps using Angular and, my now preferred choice, React and Flux</li>
-                <li>Hybrid mobile apps - using tools like Phonegap, Titanium and more recently React Native</li>
+                <li>Javascript - from basic JQuery to complex single page apps using Angular and, my preferred choice, React and Flux</li>
+                <li>Hybrid mobile apps - Phonegap, Titanium and React Native</li>
                 <li>CSS3 and HTML5 using graceful degradation when required</li>
                 <li>Automated testing and advocate of CI</li>
+
                 <li>Native iOS development using Objective-C and have recently started learning Swift</li>
-                <li> Agile development methodologies</li>
-                <li>Tools: Git, JavaScript Build tools, NGINX</li>
-                <li>Relational databases (MySQL and PostgreSQL) and noSQL (Redis)</li>
-                <li>Sysadmin and using automation tools like Ansible and Fabric</li>
+                <li>Agile development methodologies</li>
+                <li>Dev Tools: Git, JavaScript Build tools</li>
+
+                <li>Relational databases (MySQL and PostgreSQL)<br/>and noSQL (Redis)</li>
+                <li>Sysadmin and using automation tools<br/>like Ansible and Fabric</li>
                 <li>AWS and other cloud server providers</li>
                 <li>UI/UX Design. Not a proficient designer but have a keen eye for detail</li>
             </ul>
         </div>
     </section>
+
 
     <section>
         <div>
@@ -72,13 +76,10 @@
 
     <section>
         <div>
-            <p>I joined as a graduate after university with limited Python experience (the core language used at the agency) and picked up the skills needed to produce my first web app within a few months (<a href="http://www.dabapps.com/work/clients/twilbee/">Twilbee</a>). Within 12 months I had gained enough skills and trust to be technical lead on a small scale hybrid app and REST backend (https://www.travelplaces.mobi/). I also took the lead on a hybrid angular app and website (<a href="https://www.biteappy.com">Biteappy</a>). For this project I worked with a new graduate hire whom I had to take under my wing. The project included a large amount of functionality within a short deadline which we managed to achieve without cutting too many corners. After this project I became the go-to person for supporting new hires.</p>
+            <p>I joined as a graduate after university with limited Python experience (the core language used at the agency) and picked up the skills needed to produce my first web app within a few months (<a href="http://www.dabapps.com/work/clients/twilbee/">Twilbee</a>). Within 12 months I had gained enough skills and trust to be technical lead on a small scale hybrid app and REST backend (https://www.travelplaces.mobi/).</p>
 
-        </div>
-    </section>
+            <p>I also took the lead on a hybrid angular app and website (<a href="https://www.biteappy.com">Biteappy</a>). For this project I worked with a new graduate hire whom I had to take under my wing. The project included a large amount of functionality within a short deadline which we managed to achieve without cutting too many corners. After this project I became the go-to person for supporting new hires.</p>
 
-    <section>
-        <div>
             <p>The largest project I have worked on is <a href="https://racgaragecompare.co.uk/">TootCompare</a> (now rebranded). I started this site as a junior developer but as the site and my skills grew I became the project lead. In this role I instigated and implemented a gradual move to a service orientated API driven architecture which allowed us to easily produce several white label sites (<a href="https://bookmygarage.com/">BookMyGarage</a> and <a href="https://garagecompare.gocompare.com/">GoCompare Garage Compare</a>). This allowed a larger team to produce two new sites using more modern technologies without needing to fully understand or amend the legacy code within the core site.</p>
         </div>
     </section>
@@ -130,7 +131,7 @@
 
     <section>
         <div>
-            <h2>2008 – 2012 Brighton University </h2>
+            <h2>2008 – 2012<br/>Brighton University </h2>
             <h3>BSc Digital Media Development - 1st Class Honours</h3>
             <p>Awarded the SiteVisibility prize for the best student completing either BA Digital Media or BSc Digital Media Development.</p>
 
@@ -140,7 +141,7 @@
 
     <section>
         <div>
-            <h3>2001 – 2008 City of Bristol College &amp; St. Katherine’s School</h3>
+            <h2>2001 – 2008<br/>City of Bristol College &amp; St. Katherine’s School</h2>
             <p>3 A Levels: Computing, Media Studies and English Literature and Language</p>
             <p>12 GCSEs: grade A - C</p>
         </div>

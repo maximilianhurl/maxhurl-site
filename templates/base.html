@@ -35,7 +35,7 @@
 
 {% block body %}
     <body class="{% block bodyclass %}{% endblock %}">
-        <div class="content-container">
+        <div id="content-container">
 
             {% block content %}
             <section>
@@ -65,9 +65,8 @@
                     <ul>
                         <li><strong>Python</strong> - Django</li>
                         <li><strong>Javascript</strong> - Plain, React, Angular</li>
-                        <li><strong>Native iOS</strong> - Objective-C</li>
                         <li><strong>Hybrid apps</strong> - React Native, Phonegap</li>
-                        <li><strong>Sysadmin</strong><span class="hidden-mobile"> - Linux, AWS</span></li>
+                        <li><strong>Native iOS</strong> - Objective-C</li>
                         <li><strong>Wordpress</strong><span class="hidden-mobile"> - PHP</span></li>
                     </ul>
                 </div>
@@ -97,7 +96,7 @@
 
         <script type="text/javascript">
         {% block javascript %}
-            window.setupCanvas(4, 'canvas-container');
+            window.setupCanvas('canvas-container', 'content-container');
         {% endblock %}
         </script>
 

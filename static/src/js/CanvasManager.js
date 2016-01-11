@@ -16,13 +16,14 @@ const Engine = Matter.Engine,
 
 
 export default class CanvasManager {
-  constructor(canvasContainerId, contentContainerId) {
+  constructor(canvasContainerId, contentContainerId, contentPadding=200) {
 
     this.TRIANGLECOUNT = $('section').length;
     this.INITIALWIDTH = 0;
     this.TOTALHEIGHT = 0;
     this.BALLWIDTH = 0;
     this.YOFFSET = 100;
+    this.CONTENTPADDING = contentPadding;
 
     this.COLOURS = [
       '#b6dc62',
@@ -33,8 +34,7 @@ export default class CanvasManager {
 
     this.BGCOL = '#1e1f1f';
 
-    //this.SPAWNTIME = 680;
-    this.SPAWNTIME = 3000;
+    this.SPAWNTIME = 850;
 
     this.engine = Engine.create(document.getElementById(canvasContainerId), {
         render: {
@@ -59,7 +59,7 @@ export default class CanvasManager {
   addBall() {
     const color = randomItem(this.COLOURS);
     let body = Bodies.circle(
-      Common.random(this.SHAPEOFFSET, this.SHAPEWIDTH),
+      Common.random(this.SHAPEOFFSET, this.SHAPEWIDTH) + this.BALLWIDTH,
       Common.random(-50, -100),
       this.BALLWIDTH,
       {
@@ -69,8 +69,8 @@ export default class CanvasManager {
         }
       }
     );
-    body.frictionAir = 0.01;
-    body.friction = 0.01;
+    body.frictionAir = 0.011;
+    body.friction = 0.011;
     World.add(this.engine.world, [body]);
   }
 
@@ -126,7 +126,7 @@ export default class CanvasManager {
         }
       }
 
-      const height = Math.max(this.SHAPEWIDTH, $('section div').eq(index).height() + 220)
+      const height = Math.max(this.SHAPEWIDTH, $('section div').eq(index).height() + this.CONTENTPADDING)
       const yPos = Math.max(this.TOTALHEIGHT - this.SHAPEWIDTH/2, this.YOFFSET);
 
       if (index % 2) {
@@ -162,7 +162,7 @@ export default class CanvasManager {
     const borderOpts = { isStatic: true, render: {fillStyle: 'transparent', strokeStyle: 'transparent'}};
     World.add(this.engine.world, [
       Bodies.rectangle(
-        this.BALLWIDTH * 2.7, 0, 1, this.TOTALHEIGHT, borderOpts
+        this.BALLWIDTH * 3.2, 0, 1, this.TOTALHEIGHT, borderOpts
       ),
       Bodies.rectangle(
         this.SHAPEWIDTH + this.BALLWIDTH * 2.7, 0, 1, this.TOTALHEIGHT, borderOpts

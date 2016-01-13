@@ -8,7 +8,7 @@
     "build-less": "mkdir -p static/build/css && lessc static/src/less/styles.less static/build/css/styles.css --silent",
     "watch-less": "watch 'npm run build-less' static/src/less/",
     "build-js": "mkdir -p static/build/js && browserify -t babelify static/src/js/canvas.js -o static/build/js/canvas.js",
-    "watch": "watchify -t babelify static/src/js/canvas.js -o static/build/js/canvas.js -v",
+    "watch-js": "watchify -t babelify static/src/js/canvas.js -o static/build/js/canvas.js -v",
     "cp-images": "mkdir -p static/build/images && cp -r static/src/images/* static/build/images/ || :",
     "cp-fonts": "mkdir -p static/build/fonts && cp -r static/src/fonts/* static/build/fonts/ || :",
     "cp-robot": "cp static/src/robots.txt static/build/robots.txt || :",

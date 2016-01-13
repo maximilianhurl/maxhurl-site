@@ -2,6 +2,7 @@ import Matter from './matter-edited';
 import _ from 'underscore';
 import Visibility from 'visibilityjs';
 import { randomItem } from './utils';
+import Triangle from './Triangle';
 import $ from 'jquery';
 
 
@@ -34,22 +35,22 @@ export default class CanvasManager {
 
     this.BGCOL = '#1e1f1f';
 
-    this.SPAWNTIME = 850;
+    this.SPAWNTIME = 1000;
 
     this.engine = Engine.create(document.getElementById(canvasContainerId), {
-        render: {
-            options: {
-                background: this.BGCOL,
-                wireframeBackground: '#222',
-                wireframes: false,
-            }
+      render: {
+        options: {
+          background: this.BGCOL,
+          wireframeBackground: '#222',
+          wireframes: false,
         }
+      }
     });
   }
 
   setSizeOptions() {
     this.TOTALHEIGHT = 0;
-    this.INITIALWIDTH = Math.min(500, document.documentElement.clientWidth);
+    this.INITIALWIDTH = Math.min(500, $(window).width());
     const clientWidth = this.INITIALWIDTH - ((this.INITIALWIDTH/100) * 16);
     this.BALLWIDTH = (clientWidth/100) * 5;
     this.SHAPEOFFSET = (this.INITIALWIDTH/100) * 26;
@@ -81,31 +82,6 @@ export default class CanvasManager {
     }
   }
 
-  calculateSlopeYoffset(width, angle=27) {
-    return parseInt(Math.tan(angle * Math.PI / 180) * width);
-  }
-
-  getLeftVertices(width, height) {
-    const slopePosition = this.calculateSlopeYoffset(width);
-    return Vertices.create([
-      {x: 0, y: 0},
-      {x:width, y:slopePosition},
-      {x:width, y:height > this.SHAPEWIDTH ? height - slopePosition: slopePosition},
-      {x: 0, y:height},
-    ]);
-  }
-
-  getRightVertices(width, height) {
-    const slopePosition = this.calculateSlopeYoffset(width);
-    const bottomEdge = height + -slopePosition;
-    return Vertices.create([
-      {x: 0, y: 0},
-      {x:width, y:-slopePosition},
-      {x:width, y:bottomEdge},
-      {x: 0, y:Math.max(bottomEdge - slopePosition, 2)},
-    ]);
-  }
-
   positionTextSection(index, yPos, height) {
     $('section').eq(index).css({
       "margin-top": yPos,
@@ -117,7 +93,8 @@ export default class CanvasManager {
 
     const bodies = _.map(_.range(this.TRIANGLECOUNT), (index) => {
 
-      let body;
+      let triangle;
+
       const opts = {
         isStatic: true,
         render: {
@@ -131,12 +108,10 @@ export default class CanvasManager {
 
       if (index % 2) {
         //left side triangle
-        const vertices = this.getLeftVertices(this.SHAPEWIDTH, height);
-        body = Bodies.fromVertices(5, yPos, vertices, opts)
+        triangle = new Triangle(opts, this.SHAPEWIDTH, height, yPos, this.SHAPEOFFSET, true);
       } else {
         //right side triangle
-        const vertices = this.getRightVertices(this.SHAPEWIDTH, height);
-        body = Bodies.fromVertices(this.SHAPEOFFSET, yPos + (this.SHAPEWIDTH/2), vertices, opts)
+        triangle = new Triangle(opts, this.SHAPEWIDTH, height, yPos, this.SHAPEOFFSET, false);
       }
 
       //set size of section
@@ -148,7 +123,7 @@ export default class CanvasManager {
 
       this.TOTALHEIGHT += height - (this.SHAPEWIDTH/2);
 
-      return body;
+      return triangle.generate();
     });
 
     World.add(this.engine.world, bodies);

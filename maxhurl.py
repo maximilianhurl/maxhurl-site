@@ -1,11 +1,17 @@
-import requests
-from secrets import mailgun_key, app_message_key, mark_message_key
+from datetime import date
 from flask import Flask, render_template, request, jsonify
 from flask.ext.cors import CORS, cross_origin
+from secrets import mailgun_key, app_message_key, mark_message_key
+import requests
 
 
-app = Flask(__name__, static_folder='static', static_url_path='')
+app = Flask(__name__, static_folder='static/build', static_url_path='/static')
 CORS(app)
+
+
+@app.context_processor
+def inject_current_year():
+    return dict(year=date.today().year)
 
 
 @app.route("/")

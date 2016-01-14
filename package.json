@@ -7,12 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-less": "mkdir -p static/build/css && lessc static/src/less/styles.less static/build/css/styles.css --silent",
     "watch-less": "watch 'npm run build-less' static/src/less/",
-    "build-js": "mkdir -p static/build/js && browserify -t babelify static/src/js/canvas.js -o static/build/js/canvas.js",
+    "build-js": "browserify -t babelify static/src/js/canvas.js -o static/build/js/canvas.js",
+    "build-js-min": "browserify -t babelify static/src/js/canvas.js -o static/build/js/canvas.js -p [minifyify --no-map]",
     "watch-js": "watchify -t babelify static/src/js/canvas.js -o static/build/js/canvas.js -v",
     "cp-images": "mkdir -p static/build/images && cp -r static/src/images/* static/build/images/ || :",
     "cp-fonts": "mkdir -p static/build/fonts && cp -r static/src/fonts/* static/build/fonts/ || :",
     "cp-robot": "cp static/src/robots.txt static/build/robots.txt || :",
-    "build": "npm run build-js && npm run cp-robot && npm run build-less && npm run cp-fonts && npm run cp-images"
+    "build-static": "mkdir -p static/build/js && npm run cp-robot && npm run build-less && npm run cp-fonts && npm run cp-images",
+    "build-dev": "npm run build-static && npm run build-js",
+    "build-prod": "npm run build-static && npm run build-js-min"
   },
   "repository": {
     "type": "git",
@@ -32,6 +35,7 @@
     "jquery": "^2.1.4",
     "less": "^2.5.3",
     "matter-js": "=0.8.0",
+    "minifyify": "^7.1.0",
     "poly-decomp": "^0.1.1",
     "underscore": "=1.8.3",
     "visibilityjs": "=1.2.1",

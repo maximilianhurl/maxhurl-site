@@ -24,6 +24,11 @@ def cv():
     return render_template('cv.html')
 
 
+@app.route('/robots.txt')
+def robots():
+    return app.send_static_file('robots.txt')
+
+
 def send_message(to, subject, message):
     requests.post(
         "https://api.mailgun.net/v2/sandboxb7645bd943614e39bb23ef85318eb9e1.mailgun.org/messages",

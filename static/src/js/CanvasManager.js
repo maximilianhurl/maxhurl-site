@@ -177,6 +177,14 @@ export default class CanvasManager {
       this.removeShapes();
     });
 
-    window.onresize = () => this.updateScene();
+    //re-render when window width changes
+    var windowWidth = $(window).width();
+    $(window).resize(function () {
+        const newWindowWidth = $(window).width();
+        if (newWindowWidth != windowWidth) {
+          windowWidth = newWindowWidth;
+          this.updateScene();
+        }
+    }.bind(this));
   }
 }

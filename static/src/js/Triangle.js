@@ -1,7 +1,7 @@
 import Matter from './matter-edited';
 
 // Matter.js module aliases
-const  Bodies = Matter.Bodies,
+const Bodies = Matter.Bodies,
     Vertices = Matter.Vertices;
 
 export default class Triangle {

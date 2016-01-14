@@ -5,7 +5,6 @@ import { randomItem } from './utils';
 import Triangle from './Triangle';
 import $ from 'jquery';
 
-
 // Matter.js module aliases
 const Engine = Matter.Engine,
     World = Matter.World,
@@ -14,7 +13,6 @@ const Engine = Matter.Engine,
     Composites = Matter.Composites,
     Vertices = Matter.Vertices,
     MouseConstraint = Matter.MouseConstraint;
-
 
 export default class CanvasManager {
   constructor(canvasContainerId, contentContainerId, contentPadding=200) {
@@ -25,17 +23,15 @@ export default class CanvasManager {
     this.BALLWIDTH = 0;
     this.YOFFSET = 100;
     this.CONTENTPADDING = contentPadding;
+    this.SPAWNTIME = 1000;
 
+    this.BGCOL = '#1e1f1f';
     this.COLOURS = [
       '#b6dc62',
       '#575b5b',
       '#c44d58',
       '#4cc9c0'
     ];
-
-    this.BGCOL = '#1e1f1f';
-
-    this.SPAWNTIME = 1000;
 
     this.engine = Engine.create(document.getElementById(canvasContainerId), {
       render: {
@@ -129,7 +125,6 @@ export default class CanvasManager {
     World.add(this.engine.world, bodies);
   }
 
-
   addBorders() {
     //add invisible borders
     this.TOTALHEIGHT += this.SHAPEWIDTH/2;  //extend the scene a little
@@ -167,7 +162,6 @@ export default class CanvasManager {
 
     boundsMax.y = canvas.width = renderOptions.width = this.INITIALWIDTH;
     boundsMax.y = canvas.height = renderOptions.height = this.TOTALHEIGHT;
-
   }
 
   render() {

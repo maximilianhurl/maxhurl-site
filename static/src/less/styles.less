@@ -81,7 +81,6 @@ p, li  {
   font-size:1.5em;
 }
 
-/* overides for large amounts of text */
 .small-text {
   p, li  {
     font-size:1.4em;
@@ -209,25 +208,4 @@ section {
     width: 61%;
   }
 }
-
-/* generate layout for text on left triangles */
-/*.generate-left-sections(21);
-
-.generate-left-sections(@n, @i: 2) when (@i =< @n) {
-  #content-container section:nth-child(@{i}) {
-    margin-top: ((@i - 1) * 44% - (@i * 0.28));
-  }
-  .generate-left-sections(@n, (@i + 2));
-}*/
-
-/* generate layout for text on right triangles */
-/*.generate-right-sections(21);
-
-.generate-right-sections(@n, @i: 1) when (@i =< @n) {
-  #content-container section:nth-child(@{i}) {
-    margin-top: (max(((@i - 1) / 2) * 88% - (@i * 0.28), 0));
-  }
-  .generate-right-sections(@n, (@i + 2));
-}*/
-
 

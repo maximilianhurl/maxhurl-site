@@ -10,9 +10,7 @@
 
 `env/bin/pip install -r requirements.txt`
 
-`npm install`
-
-`npm run build`
+`./build`
 
 
 ## Running the app

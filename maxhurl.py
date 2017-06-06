@@ -1,12 +1,17 @@
 from datetime import date
 from flask import Flask, render_template, request, jsonify
 from flask.ext.cors import CORS, cross_origin
-from secrets import mailgun_key, app_message_key, mark_message_key
+from os import environ
 import requests
 
 
 app = Flask(__name__, static_folder='static/build', static_url_path='/static')
 CORS(app)
+
+
+MAILGUN_KEY = environ['MAILGUN_KEY']
+APP_MESSAGE_KEY = environ['APP_MESSAGE_KEY']
+MARK_MESSAGE_KEY = environ['MARK_MESSAGE_KEY']
 
 
 @app.context_processor
@@ -32,7 +37,7 @@ def robots():
 def send_message(to, subject, message):
     requests.post(
         "https://api.mailgun.net/v2/sandboxb7645bd943614e39bb23ef85318eb9e1.mailgun.org/messages",
-        auth=("api", mailgun_key),
+        auth=("api", MAILGUN_KEY),
         data={
             "from": "no-reply <no-reply@sandboxb7645bd943614e39bb23ef85318eb9e1.mailgun.org>",
             "to": to,
@@ -50,7 +55,7 @@ def send_mark_message():
         if value not in request.form.keys():
             return jsonify(message="Unable to send message"), 400
 
-    if request.form["mark_message_key"] != mark_message_key:
+    if request.form["mark_message_key"] != MARK_MESSAGE_KEY:
         return jsonify(message="Incorrect key"), 400
 
     to_emails = "Max <max@maxhurl.co.uk>, Mark <info@theshoelounge.net>"
@@ -80,7 +85,7 @@ def send_app_message():
         if value not in request.form.keys():
             return jsonify(message="Unable to send message"), 400
 
-    if request.form["app_message_key"] != app_message_key:
+    if request.form["app_message_key"] != APP_MESSAGE_KEY:
         return jsonify(message="Incorrect key"), 400
 
     user_email = request.form["user_email"]

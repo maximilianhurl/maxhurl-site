@@ -1,10 +1,25 @@
-
 #!/bin/bash
+
+if [ -z "$NVM_DIR" ]
+then
+    NVM_DIR=$HOME/.nvm
+fi
+if [ -f $NVM_DIR/nvm.sh ]; then
+    . $NVM_DIR/nvm.sh
+else
+    . $(brew --prefix nvm)/nvm.sh
+fi
+
+nvm install
+nvm use
 
 set -e
 
-virtualenv env
-env/bin/pip install -r requirements.txt
-
 npm install
 npm run build-dev
+
+
+pyenv install --skip-existing
+pyenv exec python -m venv env
+env/bin/pip install -r requirements.txt
+

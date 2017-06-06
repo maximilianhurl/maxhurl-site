@@ -1,0 +1,4 @@
+static/build/css/*.css
+static/build/js/*.js
+env*
+node_modules*

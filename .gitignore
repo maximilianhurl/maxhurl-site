@@ -5,4 +5,5 @@
 /env
 *sublime-workspace
 /node_modules
-/static/build
+static/build/css/*.css
+static/build/js/*.js

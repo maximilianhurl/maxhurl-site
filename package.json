@@ -5,7 +5,7 @@
   "main": "static/js/canvas.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-less": "lessc static/src/less/styles.less static/build/css/styles.css --silent",
+    "build-less": "lessc static/src/less/styles.less static/build/css/styles.css --silent && lessc static/src/less/print.less static/build/css/print.css --silent",
     "watch-less": "watch 'npm run build-less' static/src/less/",
     "build-js": "browserify -t babelify static/src/js/canvas.js -o static/build/js/canvas.js",
     "build-js-min": "browserify -t babelify static/src/js/canvas.js -o static/build/js/canvas.js -p [minifyify --no-map]",

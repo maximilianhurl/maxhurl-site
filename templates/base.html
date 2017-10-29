@@ -29,7 +29,9 @@
 <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='images/apple-touch-icon-120x120.png') }}">
 <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='images/apple-touch-icon-152x152.png') }}">
 
-{% block styles %}<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />{% endblock %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/print.css') }}" media="print"/>
+
 </head>
 
 {% block body %}
@@ -40,7 +42,7 @@
             <section>
                 <div>
                     <h1>Max Hurl</h1>
-                    <p>Mobile Apps, Web Development<br/>&amp; Biscuit Eating. </p>
+                    <p>Web Development, Mobile Apps, <br/>&amp; Biscuit Eating. </p>
                 </div>
             </section>
 

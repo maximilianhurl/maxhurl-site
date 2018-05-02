@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y git nginx libreadline-dev python3-pip python3-venv build-essential python-setuptools nodejs npm
 RUN ln -s /usr/bin/nodejs /usr/bin/node

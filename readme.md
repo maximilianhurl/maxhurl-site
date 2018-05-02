@@ -21,5 +21,5 @@
 
 `docker build -t max-hurl-site .`
 
-`docker run -i -t --init --rm -p 8001:8080 -e MAILGUN_KEY=test -e APP_MESSAGE_KEY=test -e MARK_MESSAGE_KEY=test a408cbd02ac1`
+`docker run -i -t --init --rm -p 8001:8080 -e MAILGUN_KEY=test -e APP_MESSAGE_KEY=test -e MARK_MESSAGE_KEY=test max-hurl-site`
 

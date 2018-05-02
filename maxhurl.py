@@ -1,6 +1,6 @@
 from datetime import date
 from flask import Flask, render_template, request, jsonify
-from flask.ext.cors import CORS, cross_origin
+from flask_cors import CORS, cross_origin
 from os import environ
 import requests
 

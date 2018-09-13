@@ -14,7 +14,7 @@ ADD . /opt/app
 
 # install and build
 RUN python3 -m venv env && env/bin/pip install -U setuptools && env/bin/pip install -r requirements.txt
-RUN npm install && npm run build-prod
+RUN npm install && npm run build-prod && rm -r node_modules
 
 # Make port 80 available to the world outside this container
 EXPOSE 8080

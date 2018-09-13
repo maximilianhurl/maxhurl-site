@@ -23,3 +23,7 @@
 
 `docker run -i -t --init --rm -p 8001:8080 -e MAILGUN_KEY=test -e APP_MESSAGE_KEY=test -e MARK_MESSAGE_KEY=test max-hurl-site`
 
+
+## Building & running with docker compose
+
+`export MAILGUN_KEY=test && docker-compose up`

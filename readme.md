@@ -26,4 +26,4 @@
 
 ## Building & running with docker compose
 
-`export MAILGUN_KEY=test && docker-compose up`
+`export MAILGUN_KEY=test && docker-compose up -f docker-compose-local.yml `

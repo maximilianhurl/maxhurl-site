@@ -4,16 +4,9 @@ services:
     build: .
     restart: always
     image: max-hurl-site
+    ports:
+      - "8002:8080"
     environment:
       - APP_MESSAGE_KEY=5aaHhgGFztHG
       - MARK_MESSAGE_KEY=5markHhgGFztHMX
       - MAILGUN_KEY
-    labels:
-      - "traefik.frontend.rule=Host:max.localhost"
-      - "traefik.enable=true"
-      - "traefik.port=8080"
-    networks:
-      - traefik-web
-networks:
-  traefik-web:
-    external: true

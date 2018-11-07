@@ -9,7 +9,8 @@ services:
       - MARK_MESSAGE_KEY=5markHhgGFztHMX
       - MAILGUN_KEY
     labels:
-      - "traefik.frontend.rule=Host:max.localhost"
+      - "traefik.backend=maxhurl-site"
+      - "traefik.frontend.rule=Host:46.101.60.201"
       - "traefik.enable=true"
       - "traefik.port=8080"
     networks:

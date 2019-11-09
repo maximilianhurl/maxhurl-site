@@ -4,7 +4,6 @@
 
     nvm
     pyenv
-    postgreSQL
 
 
 ## Building the project
@@ -15,6 +14,11 @@
 ## Running the app
 
 `env/bin/waitress-serve --port 8080  maxhurl:app`
+
+
+## Running the app (in dev mode)
+
+`MAILGUN_KEY=test APP_MESSAGE_KEY=test MARK_MESSAGE_KEY=test FLASK_ENV=development FLASK_APP=maxhurl:app env/bin/flask run --reload`
 
 
 ## Building & running the docker image

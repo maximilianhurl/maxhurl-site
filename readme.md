@@ -11,14 +11,17 @@
     ./build
 
 
-## Running the app
+## Running the app in dev mode
 
-`env/bin/waitress-serve --port 8080  maxhurl:app`
-
-
-## Running the app (in dev mode)
+### Backend
 
 `MAILGUN_KEY=test APP_MESSAGE_KEY=test MARK_MESSAGE_KEY=test FLASK_ENV=development FLASK_APP=maxhurl:app env/bin/flask run --reload`
+
+### Frontend
+
+`cd frontend`
+`nvm use`
+`npm run start`
 
 
 ## Building & running the docker image

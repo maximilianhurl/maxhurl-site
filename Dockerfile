@@ -1,8 +1,8 @@
-FROM python:3.8-slim
+FROM python:3.9-slim
 
 RUN apt-get update && apt-get install -y curl
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash && apt-get install -y nodejs npm
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash && apt-get install -y nodejs npm
 
 
 # Set the working directory to /app

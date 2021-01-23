@@ -3,25 +3,30 @@
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
-    "start": "rollup -c -w",
+    "dev": "rollup -c -w",
+    "start": "sirv public",
+    "lint": "eslint './src/**/*.{ts,js}'",
     "validate": "svelte-check"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-typescript": "^8.0.0",
+    "@tsconfig/svelte": "^1.0.10",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "eslint": "^7.17.0",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.0.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
+    "sirv-cli": "^1.0.10",
     "svelte": "^3.31.0",
     "svelte-check": "^1.0.0",
     "svelte-preprocess": "^4.0.0",
-    "@rollup/plugin-typescript": "^8.0.0",
-    "typescript": "^4.1.2",
     "tslib": "^2.0.0",
-    "@tsconfig/svelte": "^1.0.10",
-    "sirv-cli": "^1.0.10"
+    "typescript": "^4.1.2"
   },
   "dependencies": {}
 }

@@ -15,9 +15,8 @@ $: console.log(windowScrollY);
     display: flex;
   }
 
-  .wrapper div {
-    background: green;
-    min-width: 300px;
+  .wrapper div:first-child {
+    min-width: 200px;
   }
 
   .wrapper div:last-child {
@@ -25,15 +24,37 @@ $: console.log(windowScrollY);
   }
 
   .content-vertical-padding {
-    height: 60px;
+    height: 140px;
   }
 
   main {
-    background-color: red;
     display: block;
     margin: 0 auto;
-    height: 2000px;
-		width: 300px;
+		max-width: 600px;
+  }
+
+  .view-source {
+    bottom: 20px;
+    color: #9C9FA0;
+    cursor: pointer;
+    font-size: 12px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+
+  .view-source:hover {
+    color: #555656;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .wrapper div:first-child {
+      min-width: 40px;
+    }
+
+     .wrapper div:last-child {
+      min-width: 40px;
+    }
   }
 </style>
 
@@ -56,7 +77,11 @@ $: console.log(windowScrollY);
     </main>
 
     <div class="content-vertical-padding">
-      <BackgroundPattern />
+      <BackgroundPattern>
+        <a class="view-source" href="https://github.com/maximilianhurl/maxhurl-site">
+        View Source
+        </a>
+      </BackgroundPattern>
     </div>
   </div>
 

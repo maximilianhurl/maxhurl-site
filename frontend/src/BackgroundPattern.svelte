@@ -19,4 +19,5 @@ div {
 </style>
 
 <div bind:clientWidth={width} bind:clientHeight={height}>
+  <slot></slot>
 </div>

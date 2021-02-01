@@ -1,13 +1,11 @@
 <svelte:options immutable={true}/>
 
 <script lang="ts">
+  import BackgroundPattern from './background/BackgroundPattern.svelte';
 
-import BackgroundPattern from './BackgroundPattern.svelte';
+  let windowScrollY;
 
-let windowScrollY;
-
-$: console.log(windowScrollY);
-
+  $: console.log(windowScrollY);
 </script>
 
 <style>
@@ -41,6 +39,7 @@ $: console.log(windowScrollY);
     position: absolute;
     text-align: center;
     width: 100%;
+    z-index: 100;
   }
 
   .view-source:hover {

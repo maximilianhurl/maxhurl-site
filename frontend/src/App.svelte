@@ -19,6 +19,7 @@
 		content: "+";
 		color: #8CEAA6;
 		display: inline-block;
+		font-family: 'poppinsbold', sans-serif;
 		font-weight: bold;
 		width: 20px;
 	}

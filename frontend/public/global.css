@@ -1,21 +1,32 @@
-html, body {
-	position: relative;
-	width: 100%;
-	height: 100%;
+@font-face {
+	font-family: 'poppinsbold';
+	src: url('/fonts/poppins-bold.woff2') format('woff2'),
+			 url('/fonts/poppins-bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'poppinslight';
+	src: url('/fonts/poppins-light.woff2') format('woff2'),
+		   url('/fonts/poppins-light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
 	color: #2D2D2D;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'poppinslight', sans-serif;
 	font-size: 18px;
-	font-weight: 300;
+	line-height: 30px;
 	padding: 0px;
+	position: relative;
 }
 
 h1, h2, h3, h4 {
-	font-weight:700;
+	font-family: 'poppinsbold', sans-serif;
 }
 
 h1 {
@@ -27,8 +38,8 @@ h2 {
 }
 
 h3 {
+	font-family: 'poppinslight', sans-serif;
 	font-size: 22px;
-	font-weight: 300;
 }
 
 a {

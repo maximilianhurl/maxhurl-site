@@ -1,8 +1,6 @@
 <svelte:options immutable={true}/>
 
 <script lang="ts">
-  import type { SvelteComponent } from "svelte";
-
   import { shapesConfig } from './shapeConfig';
 
   interface ContentPos {
@@ -15,8 +13,8 @@
   export let xPosOffset = 0;
   export let yPosOffset = 0;
 
-  export let documentWidth;
-  export let documentHeight;
+  export let documentWidth: number;
+  export let documentHeight: number;
 
   export let contentPos: ContentPos;
 

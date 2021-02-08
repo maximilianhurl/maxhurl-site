@@ -1,15 +1,15 @@
 @font-face {
 	font-family: 'poppinsbold';
-	src: url('/fonts/poppins-bold.woff2') format('woff2'),
-			 url('/fonts/poppins-bold.woff') format('woff');
+	src: url('/static/fonts/poppins-bold.woff2') format('woff2'),
+			 url('/static/fonts/poppins-bold.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'poppinslight';
-	src: url('/fonts/poppins-light.woff2') format('woff2'),
-		   url('/fonts/poppins-light.woff') format('woff');
+	src: url('/static/fonts/poppins-light.woff2') format('woff2'),
+		   url('/static/fonts/poppins-light.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }

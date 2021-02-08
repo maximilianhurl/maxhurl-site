@@ -1,22 +1,16 @@
-FROM python:3.9-slim
+FROM node:14-alpine
 
-RUN apt-get update && apt-get install -y curl
+RUN apk add --no-cache nginx
 
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash && apt-get install -y nodejs npm
+WORKDIR /app
+ADD . /app
 
+# ensure nginx PID dir exists
+RUN mkdir -p /run/nginx
+ADD nginx.conf /etc/nginx/conf.d/default.conf
 
-# Set the working directory to /app
-RUN mkdir /opt/app
-WORKDIR /opt/app
+RUN npm i && npm run build && rm -rf node_modules
 
-# Copy the current directory contents into the container at /app
-ADD . /opt/app
+EXPOSE 80
 
-# install and build
-RUN python -m venv env && env/bin/pip install -r requirements.txt
-RUN npm install && npm run build-prod && rm -r node_modules
-
-# Make port 80 available to the world outside this container
-EXPOSE 8080
-
-CMD ["env/bin/waitress-serve", "--port", "8080", "maxhurl:app"]
+CMD ["nginx", "-g", "daemon off;"]

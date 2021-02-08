@@ -1,7 +1,6 @@
 <svelte:options immutable={true}/>
 
 <script lang="ts">
-  import { onMount } from 'svelte';
   import BackgroundTile from './BackgroundTile.svelte';
 
   // vars for storing page and content size

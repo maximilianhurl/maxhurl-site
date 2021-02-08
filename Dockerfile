@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:14-alpine as base
 
 RUN apk add --no-cache nginx
 
@@ -14,3 +14,7 @@ RUN npm i && npm run build && rm -rf node_modules
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
+
+FROM base as test
+COPY . /app/
+RUN npm i && npm run validate && npm run lint

@@ -1,33 +1,27 @@
+# Maxhurl.co.uk
+
+My [homepage](https://www.maxhurl.co.uk/). Built with [Svelte](https://svelte.dev/).
 
 
-## Requirements
+## Running locally
 
-    nvm
-    pyenv
+1. Install the dependencies (requires [nvm](https://github.com/nvm-sh/nvm)):
 
+	```bash
+	nvm use
+	npm install
+	```
 
-## Building the project
+2. Start the dev server
 
-    ./build
-
-
-## Running the app
-
-`env/bin/waitress-serve --port 8080  maxhurl:app`
-
-
-## Running the app (in dev mode)
-
-`MAILGUN_KEY=test APP_MESSAGE_KEY=test MARK_MESSAGE_KEY=test FLASK_ENV=development FLASK_APP=maxhurl:app env/bin/flask run --reload`
+	```bash
+	npm run dev
+	```
 
 
-## Building & running the docker image
+## Running in prod mode with docker
 
-`docker build -t max-hurl-site .`
-
-`docker run -i -t --init --rm -p 8001:8080 -e MAILGUN_KEY=test -e APP_MESSAGE_KEY=test -e MARK_MESSAGE_KEY=test max-hurl-site`
-
-
-## Building & running with docker compose
-
-`export MAILGUN_KEY=test && docker-compose up`
+```bash
+docker build -t max-hurl-site --target base .
+docker run -t --init --rm -p 8080:80 max-hurl-site
+```

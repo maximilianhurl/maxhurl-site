@@ -1,0 +1,66 @@
+@font-face {
+	font-family: 'poppinsbold';
+	src: url('/static/fonts/poppins-bold.woff2') format('woff2'),
+			 url('/static/fonts/poppins-bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'poppinslight';
+	src: url('/static/fonts/poppins-light.woff2') format('woff2'),
+		   url('/static/fonts/poppins-light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'poppinsmedium';
+	src: url('/static/fonts/poppins-medium.woff2') format('woff2'),
+		   url('/static/fonts/poppins-medium.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	color: #2D2D2D;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'poppinslight', sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 0px;
+	position: relative;
+}
+
+h1, h2, h3 {
+	font-family: 'poppinsbold', sans-serif;
+}
+
+h1 {
+	font-size: 42px;
+}
+
+h2 {
+	font-size: 22px;
+}
+
+h3 {
+	font-family: 'poppinslight', sans-serif;
+	font-size: 22px;
+}
+
+h4 {
+	font-family: 'poppinsmedium', sans-serif;
+}
+
+a {
+	color: #2D2D2D;
+	text-decoration: underline;
+	text-decoration-color: #FFE86B;
+	transition: text-decoration-color 0.3s;
+}
+
+a:hover {
+	text-decoration-color: #2D2D2D;
+}

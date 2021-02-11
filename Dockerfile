@@ -1,22 +1,14 @@
-FROM python:3.8-slim
+FROM node:14-alpine as base
 
-RUN apt-get update && apt-get install -y curl
+WORKDIR /app
+ADD . /app
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash && apt-get install -y nodejs npm
+RUN npm i && npm run build && rm -rf node_modules && npm i --production
 
+EXPOSE 80
 
-# Set the working directory to /app
-RUN mkdir /opt/app
-WORKDIR /opt/app
+CMD ["npm", "run", "start"]
 
-# Copy the current directory contents into the container at /app
-ADD . /opt/app
-
-# install and build
-RUN python -m venv env && env/bin/pip install -r requirements.txt
-RUN npm install && npm run build-prod && rm -r node_modules
-
-# Make port 80 available to the world outside this container
-EXPOSE 8080
-
-CMD ["env/bin/waitress-serve", "--port", "8080", "maxhurl:app"]
+FROM base as test
+COPY . /app/
+RUN npm i && npm run validate && npm run lint

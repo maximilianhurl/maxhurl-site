@@ -40,7 +40,7 @@
   $: contentPos = {
     topLeftX: contentLeft - 10,
     topLeftY: contentTop - 20,
-    bottomRightX: contentLeft + contentWidth - 40,
+    bottomRightX: contentLeft + contentWidth - 15,
     bottomRightY: contentTop + contentHeight,
   }
 </script>

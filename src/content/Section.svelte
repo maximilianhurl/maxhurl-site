@@ -21,6 +21,4 @@
   <slot name="title"></slot>
 </h2>
 
-<p>
-  <slot name="content"></slot>
-</p>
+<slot name="content"></slot>

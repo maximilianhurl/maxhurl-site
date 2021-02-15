@@ -16,7 +16,7 @@
 		<span slot="content">
 			<p>
 				I’m a full-stack web developer based in Brighton, with 10 years experience
-				taking projects from initial requirements through to finished product.<br/>
+				taking projects from initial requirements through to finished product.
 				I enjoy leading other developers and fostering collaboration across the
 				team. I’m a firm believer in agile development and always excited to
 				learn new technologies

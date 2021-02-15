@@ -14,6 +14,12 @@
     font-style: italic;
     margin: 0;
   }
+
+  @media only screen and (max-width: 700px) {
+    div {
+      flex-direction: column;
+    }
+  }
 </style>
 
 <div>

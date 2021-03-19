@@ -120,7 +120,7 @@ a {
 		<span slot="content">
 			<HeaderWithDate>
 				<span slot="title">Freelance development</span>
-				<span slot="date">2009 - 2017</span>
+				<span slot="date">2010 - 2017</span>
 			</HeaderWithDate>
 			<p>
 				Moonlighting on a range of projects mostly small scale CMS driven sites using Python and Wordpress.
@@ -143,8 +143,7 @@ a {
 		<span slot="title">Interests</span>
 		<span slot="content">
 			<p>
-				I used to enjoy attending local programming meet-ups. Outside of my work,
-				I’m a keen runner, an avid film fan and always enjoy a
+				Outside of my work I’m a semi-keen runner, an avid film fan and always enjoy a
 				good <a href="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">cat GIF</a>.
 			</p>
 		</span>

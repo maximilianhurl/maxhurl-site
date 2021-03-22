@@ -87,7 +87,7 @@ a {
 		<span slot="content">
 			<HeaderWithDate>
 				<span slot="title">Airfinity - Senior Product Engineer</span>
-				<span slot="date">July 2012 - January 2018</span>
+				<span slot="date">Jan 2018 - Dec 2018</span>
 			</HeaderWithDate>
 			<p>
 				As a full-stack engineer I contributed to all levels of the tech stack.
@@ -104,7 +104,7 @@ a {
 		<span slot="content">
 			<HeaderWithDate>
 				<span slot="title">DabApps - Engineer</span>
-				<span slot="date">July 2012 - January 2018</span>
+				<span slot="date">Jul 2012 - Jan 2018</span>
 			</HeaderWithDate>
 			<p>
 				During my time at DabApps I was involved with projects at every step of the development
@@ -133,7 +133,7 @@ a {
 		<span slot="content">
 			<HeaderWithDate>
 				<span slot="title">Brighton University</span>
-				<span slot="date">Sept 2009 - June 2012</span>
+				<span slot="date">Sept 2009 - Jun 2012</span>
 			</HeaderWithDate>
 			<p>BSc Digital Media Development - 1st</p>
 		</span>

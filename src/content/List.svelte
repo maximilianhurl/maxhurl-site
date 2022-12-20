@@ -1,11 +1,11 @@
-<svelte:options immutable={true}/>
+<svelte:options immutable={true} />
+
+<ul>
+	<slot />
+</ul>
 
 <style>
-  ul {
+	ul {
 		padding: 0;
 	}
 </style>
-
-<ul>
-  <slot></slot>
-</ul>

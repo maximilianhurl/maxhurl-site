@@ -15,8 +15,9 @@
 	<span slot="content">
 		<p>
 			I’m a full-stack web developer based in Brighton, with 10 years experience taking projects
-			from initial requirements through to finished product. I enjoy leading other developers and fostering collaboration.
-			I’m a firm believer in agile development and always excited to learn new technologies.
+			from initial requirements through to finished product. I enjoy leading other developers and
+			fostering collaboration. I’m a firm believer in agile development and always excited to learn
+			new technologies.
 		</p>
 	</span>
 </Section>
@@ -62,8 +63,8 @@
 			<span slot="date">Dec 2018 - Present</span>
 		</HeaderWithDate>
 		<p>
-			I started at Simpplr as a Senior engineer working on a paid add-on to the core platform.
-			I helped prepare it for beta by setting up infrastructure, CI, improving scalability, among
+			I started at Simpplr as a Senior engineer working on a paid add-on to the core platform. I
+			helped prepare it for beta by setting up infrastructure, CI, improving scalability, among
 			other things. I then took over as team lead in April 2022 and led a successful full product
 			launch (and multiple new feature releases since).
 		</p>
@@ -71,7 +72,7 @@
 </Section>
 
 <Section>
-	<span slot="title"></span>
+	<span slot="title" />
 	<span slot="content">
 		<HeaderWithDate>
 			<span slot="title">Futrli - Engineering Team Lead</span>

@@ -1,4 +1,8 @@
-<svelte:options immutable={true}/>
+<svelte:options immutable={true} />
+
+<li>
+	<slot />
+</li>
 
 <style>
 	li {
@@ -7,8 +11,8 @@
 	}
 
 	li:before {
-		content: "+";
-		color: #8CEAA6;
+		content: '+';
+		color: #8ceaa6;
 		display: inline-block;
 		font-family: 'poppinsbold', sans-serif;
 		font-weight: bold;
@@ -16,7 +20,3 @@
 		width: 20px;
 	}
 </style>
-
-<li>
-  <slot></slot>
-</li>

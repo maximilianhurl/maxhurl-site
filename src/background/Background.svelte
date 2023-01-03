@@ -5,8 +5,8 @@
 
 	// vars for storing page and content size
 
-	export let documentWidth: number = 0;
-	export let documentHeight: number = 0;
+	export let documentWidth = 0;
+	export let documentHeight = 0;
 
 	export let contentWidth = 0;
 	export let contentHeight = 0;

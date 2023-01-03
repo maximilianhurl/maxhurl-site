@@ -6,7 +6,7 @@ on:
     branches:
       - master
 jobs:
-  develop:
+  push:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:

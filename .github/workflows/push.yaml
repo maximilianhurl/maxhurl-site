@@ -1,0 +1,39 @@
+name: Push to ECR
+env:
+  NODE_VERSION: '18.12'
+on:
+  push:
+    branches:
+      - master
+jobs:
+  develop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      REPO_NAME: 'maxhurl-site'
+      REGION: 'eu-west-2'
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        if: ${{ github.ref == 'refs/heads/master' }}
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build and push backend Docker image
+        uses: docker/build-push-action@v2
+        if: ${{ github.ref == 'refs/heads/master' }}
+        with:
+          tags: |
+            ${{ steps.login-ecr.outputs.registry }}/${{ env.REPO_NAME }}:production
+            ${{ steps.login-ecr.outputs.registry }}/${{ env.REPO_NAME }}:${{ github.sha }}
+          push: true

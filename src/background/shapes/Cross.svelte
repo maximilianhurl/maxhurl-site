@@ -6,7 +6,7 @@
 	export let fill: ColorScheme = ColorScheme.blue;
 	export let xPos = 0;
 	export let yPos = 0;
-	export let rotation:  '0' | '45' | string = '0';
+	export let rotation: '0' | '45' | string = '0';
 </script>
 
 <g transform="translate({xPos},{yPos})">

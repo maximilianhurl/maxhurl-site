@@ -57,6 +57,13 @@
 		max-width: 600px;
 	}
 
+	@media print {
+		.content-wrapper {
+			padding: 0;
+			max-width: none;
+		}
+	}
+
 	main {
 		padding: 0 20px;
 	}

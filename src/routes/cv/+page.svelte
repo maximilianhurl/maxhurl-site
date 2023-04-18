@@ -17,7 +17,7 @@
 			I’m a full-stack web developer based in Brighton, with 10 years experience taking projects
 			from initial requirements through to finished product. I enjoy leading other developers and
 			fostering collaboration. I’m a firm believer in agile development and always excited to learn
-			new technologies.
+			new technologies and methodologies.
 		</p>
 	</span>
 </Section>
@@ -42,16 +42,20 @@
 <Section>
 	<span slot="title">Key technologies</span>
 	<span slot="content">
-		<List>
-			<ListItem>Python - Django</ListItem>
-			<ListItem>Javascript - React & Typescript</ListItem>
-			<ListItem>Golang</ListItem>
-			<ListItem>Creating & integrating with APIs</ListItem>
-			<ListItem>Unit and integration testing</ListItem>
-			<ListItem>Relational and noSQL DBs</ListItem>
-			<ListItem>Cloud Infrastructure</ListItem>
-			<ListItem>Hybrid mobile apps</ListItem>
-		</List>
+		<div class="side-by-side-list">
+			<List>
+				<ListItem>Python - Django</ListItem>
+				<ListItem>Javascript - React & Typescript</ListItem>
+				<ListItem>Golang</ListItem>
+				<ListItem>Creating & integrating with APIs</ListItem>
+			</List>
+			<List>
+				<ListItem>Unit, integration and E2E testing</ListItem>
+				<ListItem>Relational and noSQL DBs</ListItem>
+				<ListItem>Cloud Infrastructure</ListItem>
+				<ListItem>Microservices</ListItem>
+			</List>
+		</div>
 	</span>
 </Section>
 
@@ -79,10 +83,9 @@
 			<span slot="date">Dec 2018 - Sept 2021</span>
 		</HeaderWithDate>
 		<p>
-			I lead a multidisciplinary team in charge of Predict, a real time cash flow forecasting tool.
-			As part of my role I help the product team with planning, conduct line management, facilitate
-			discussions, set technical direction (with the help of the team) and contribute to the back
-			and frontend of the project.
+			I led a team building the key selling point of the new platform, a real time cash flow
+			forecasting tool. As part of my role I built a large portion of the initial MVP, led planning,
+			facilitated discussions and helped set technical direction for the team.
 		</p>
 	</span>
 </Section>
@@ -96,9 +99,9 @@
 		</HeaderWithDate>
 		<p>
 			As a full-stack engineer I contributed to all levels of the tech stack. From the ETL layer
-			through to the data warehouse, internal Django powered API layer and down to the Node frontend
-			web application. I also championed and implemented a gradual move to a React driven SPA while
-			helping upskill my colleagues along the way.
+			through to the data warehouse, internal API layer and down to the frontend web application. I
+			also championed and implemented a gradual move to a React driven SPA while helping upskill my
+			colleagues along the way.
 		</p>
 	</span>
 </Section>
@@ -113,8 +116,7 @@
 		<p>
 			During my time at DabApps I was involved with projects at every step of the development
 			process; from initial discussions with clients through to architecture planning, deployment
-			and large scale refactoring multiple years later. I also mentored multiple junior developers
-			and carried out some line management duties.
+			and large scale refactoring multiple years later.
 		</p>
 	</span>
 </Section>
@@ -158,5 +160,10 @@
 <style>
 	a {
 		margin-top: 10px;
+	}
+
+	.side-by-side-list {
+		display: flex;
+		column-gap: 50px;
 	}
 </style>

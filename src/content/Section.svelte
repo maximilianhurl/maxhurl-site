@@ -13,6 +13,12 @@
 		margin: 46px 0 0 0;
 	}
 
+	@media print {
+		h2 {
+			margin: 23px 0 0 0;
+		}
+	}
+
 	h2::after {
 		background-color: #8ceaa6;
 		content: ' ';

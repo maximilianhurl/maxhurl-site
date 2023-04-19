@@ -6,7 +6,7 @@
 	export let fill: ColorScheme = ColorScheme.orange;
 	export let xPos = 0;
 	export let yPos = 0;
-	export let rotation: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' = 'topLeft';
+	export let rotation: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | string = 'topLeft';
 </script>
 
 <g transform="translate({xPos},{yPos})">

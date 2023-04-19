@@ -65,4 +65,10 @@
 		height: 100%;
 		position: absolute;
 	}
+
+	@media print {
+		svg {
+			display: none;
+		}
+	}
 </style>

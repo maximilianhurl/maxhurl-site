@@ -10,7 +10,7 @@
 		padding-left: 20px;
 	}
 
-	li:before {
+	li::before {
 		content: '+';
 		color: #8ceaa6;
 		display: inline-block;

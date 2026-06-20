@@ -13,7 +13,7 @@
 	<span slot="title">About</span>
 	<span slot="content">
 		<p>
-			I’m a full-stack web developer based in Brighton, with 10 years experience taking projects
+			I’m a full-stack web developer based in Brighton, with 10+ years experience taking projects
 			from initial requirements through to finished product. I enjoy leading other developers and
 			fostering collaboration. I’m a firm believer in agile development and always excited to learn
 			new technologies.
@@ -25,11 +25,14 @@
 	<span slot="title">Key technologies</span>
 	<span slot="content">
 		<List>
-			<ListItem>Python - Django</ListItem>
-			<ListItem>Javascript - React, Typescript</ListItem>
-			<ListItem>Relational and noSQL databases</ListItem>
-			<ListItem>Cloud Infrastructure</ListItem>
+			<ListItem>Javascript - React & Typescript</ListItem>
 			<ListItem>Golang</ListItem>
+			<ListItem>Python</ListItem>
+			<ListItem>APIs - REST, gRPC, GraphQL</ListItem>
+			<ListItem>AI driven code workflows</ListItem>
+			<ListItem>SQL DBs - Postgres, ClickHouse</ListItem>
+			<ListItem>NoSQL DBs - Redis, Dynamo</ListItem>
+			<ListItem>AWS Experience</ListItem>
 		</List>
 	</span>
 </Section>

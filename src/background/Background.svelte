@@ -46,8 +46,8 @@
 </script>
 
 <svg xmlns="http://www.w3.org/2000/svg">
-	{#each Array(tileRowCount) as _, rowIndex}
-		{#each Array(tileColumnCount) as _, columnIndex}
+	{#each Array(tileRowCount) as _, rowIndex (rowIndex)}
+		{#each Array(tileColumnCount) as _, columnIndex (columnIndex)}
 			<BackgroundTile
 				xPosOffset={calculateXOffset(columnIndex)}
 				yPosOffset={calculateYOffset(rowIndex)}

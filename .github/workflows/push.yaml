@@ -1,6 +1,6 @@
 name: Push to ECR
 env:
-  NODE_VERSION: '18.12'
+  NODE_VERSION: '24'
 on:
   push:
     branches:
@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1

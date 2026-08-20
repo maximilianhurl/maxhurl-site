@@ -1,6 +1,6 @@
 name: Pull Request
 env:
-  NODE_VERSION: '18.12'
+  NODE_VERSION: '24'
 on:
   pull_request:
 
